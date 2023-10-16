@@ -1,0 +1,77 @@
+/* universal selector */
+*{
+    font-size: 2rem;
+}
+
+/* type selector */
+span{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* id selector  */
+/* id name cannot start with digit */
+/* id are mutually exclusive type, only one per page */ */
+#a1{   
+    color: blue;
+}
+
+/* only contains li with class red */
+li.red{
+    color: red;
+}
+
+
+/* COMBINATORS */
+div span.yellow{
+    background-color: blue;
+    color: white;
+}
+
+div > span{
+    background-color: aqua;
+}
+
+div + p{
+    /* if p comes immediately after div, adjacent siblings */
+    font-family: cursive;
+}
+/* if it is required to select not just adjacent ones but all siblings, use div ~ p{} */
+
+
+/* PSEUDO CLASSES */
+li:hover{
+    background-color: aquamarine;
+    width: 20vw;
+    transform: translateX(4px) translateY(4px);
+}
+
+.pseudo{
+    width: 80vw;
+    height: 80vh;
+    background-color: lightgoldenrodyellow;
+}
+
+.textsize{
+    font-size: 1rem;
+}
+
+.boxsize{
+    width: 60vw;
+}
+
+input:focus{
+    background-color: skyblue;
+}
+
+li:first-child{
+    background-color: yellow;
+    width: 10vw;
+}
+
+li:nth-child(2n){
+    background-color: skyblue;
+}
+
+.li:not(.red){
+    background: lightgray;
+}

@@ -1,0 +1,1 @@
+Here I have put the code I wrote while learning and experimenting on selectors, combinators and pseudoclassses. I also used other pseudo classes like before, after, not etc which have not been specified here.

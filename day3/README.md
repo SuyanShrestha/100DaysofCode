@@ -1,3 +1,3 @@
 2023/10/17
 
-Today I learnt about flexbox and something on float in CSS.
+Today I learnt about flexbox, z-index and more about pseudoelements in CSS.

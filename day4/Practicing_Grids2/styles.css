@@ -1,0 +1,80 @@
+/* GRID ONE */
+
+.container, .container2{
+    height: 90vh;
+    width: 100vw;
+}
+
+.container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-columns: 3fr 7fr 2fr;
+    gap: 1rem;
+    margin-bottom: 10vh;
+}
+
+.items, .it{
+    background-color: antiquewhite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+}
+
+#item-1{
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+
+#item-2{
+    grid-row: 2 / 4;
+    grid-column: 1 / 2;
+}
+
+#item-5{
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+}
+
+
+
+/* GRID TWO */
+/* as it moves from top to bottom, numer of boxes become 1 - 2 - 3 - 4 - 6 */
+.container2{
+    display: grid;
+    /* grid-gap: 5px; */
+    grid-template-rows: repeat(4, 1fr);
+    /* On the leaf level, we have 6 boxes, but to survive decimal values, lets assign 2fr to each box in this level, so 12fr required */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+#it1{
+    grid-row: 1 / 2;
+    grid-column: span 12;
+    /* 12 / 1 = 12 */
+}
+
+#it2, #it3{
+    grid-column: span 6;
+    /* 12 / 2 = 6 */
+}
+
+#it4, #it5, #it6{
+    grid-column: span 4;
+    /* 12 / 3 = 4 */
+}
+
+#it7, #it8, #it9, #it10{
+    grid-column: span 3;
+    /* 12 / 4 = 3 */
+}
+
+#it11, #it12, #it13, #it14, #it15, #it16{
+    grid-column: span 2;
+}
+
+

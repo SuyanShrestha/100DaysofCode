@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body{
+    /* background-image: linear-gradient(90deg,#0f0c29,#302b63,#24243e); */
+}
+
+.nav1{
+    width: 100%;
+    height: 30vh;
+    border: 3px solid black;
+    position: relative;
+}
+
+.img1{
+    -webkit-mask-image: linear-gradient(transparent , black);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.nav2, .nav3{
+    width: 30vw;
+    height: 69vh;
+}
+
+.img2{
+    -webkit-mask-image: url("images/undraw_walking_in_rain_vo9p.svg");
+}
+
+.nav2{
+    float:left;
+    background-color: yellow;
+}
+
+.nav3{
+    float: right;
+    background-color: skyblue;
+}
+
+.img3{
+    -webkit-mask-image: url("images/undraw_male_avatar_g98d.svg");
+}
+
+
+/* .nav_links1 > li{
+    font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: white; 
+    list-style-type: none;
+    /* text-decoration: none; */
+} */
+
+/* 
+.nav1{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+/* .nav_links1 li{
+    display: inline-block;
+    padding: 0 2rem;
+    transition: all 0.3s ease;
+} */
+
+/* a:hover{
+    color: yellow;
+} */

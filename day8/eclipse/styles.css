@@ -49,7 +49,6 @@ body{
     border-radius: 50%;
     animation: slideIn 10s ease-in-out infinite;
 
-    display: none;
 }
 
 @keyframes slideIn{

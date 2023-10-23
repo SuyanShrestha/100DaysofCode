@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
+
+body{
+    background-image: linear-gradient(90deg, #141E30, #243B55);
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+
+}
+
+/* .objfit{
+    display: inline;
+} */
+
+img{
+    border: 3px limegreen solid;
+    height: 60vh;
+    width: 30vw;
+    margin-top: 5rem;
+    margin-left: 12rem;
+    border-radius: 10px 100px;
+    position: relative;
+    
+}
+
+h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.fit1{
+    height: 60vh;
+    width: 30vw;
+    /* without any fit, the image just gets resized and ratio is distorted such that it fits the frame */
+}
+
+img.fit2, img.fit7, img.fit8{  
+    object-fit: cover;
+    /* crops and clips image to fit the frame */
+}
+
+img.fit3, img.fit5, img.fit6{
+    object-fit: contain;
+}
+
+img.fit4{
+    object-fit: fill;
+}
+
+img.fit5{
+    object-position: 0rem 15rem;
+
+}
+
+img.fit6{
+    object-position: 22rem 0rem;
+}
+
+img.fit7{
+    object-position: top right;
+}
+
+img.fit8{
+    object-position: 10rem 0rem;
+}
+
+
+img:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, white 0px 8px 64px -8px;    
+    transition: all 1s ;
+    rotate: y 10deg;
+}
+
+.objfit{
+    perspective: 2000px;
+}
+
+/* a{
+    position: relative;
+  }
+  
+ 
+  
+  a::after{
+    content: 'abcdefg';
+    position: absolute;    
+    left: 50;
+    top: 50;     
+    width: 80%;
+    height: 20px;
+    left: 10%;  
+    background: transparent;
+    opacity: 0.4;      
+    color: white;
+    font-size: 18px;
+
+    display: none;
+
+  }
+  
+  a:hover::after{
+    display: block;
+  }
+
+  
+  img.fit2::after{
+    content:'wiwiwwiwiiw';
+  } */

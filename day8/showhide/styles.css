@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: radial-gradient(circle, #0F2027, #203A43, #2C5364);
+}
+
+.whole{
+    color: white;
+    width: 20vw;
+    height: auto;
+    background-color: #333;
+    padding: 2rem;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    margin-left: 3rem;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;}
+
+.whole h1{
+    margin: 3rem 0;
+    color: yellowgreen;
+}
+
+.whole p{
+    line-height: 150%;
+}
+
+.whole:hover{
+    animation: changeShape 30s ease-out;
+}
+
+@keyframes changeShape {
+    1%{
+        clip-path: polygon(52% 0, 63% 40%, 100% 35%, 80% 56%, 59% 56%, 53% 100%, 49% 57%, 28% 57%, 0 34%, 40% 42%);
+    }
+    5%{
+        clip-path: polygon(52% 0, 100% 0, 100% 35%, 100% 75%, 100% 100%, 53% 100%, 37% 100%, 0 100%, 0 34%, 0 0);
+        scale: 1.5;
+        transform: rotateY(360deg);
+    }
+    6%{
+        transform: none;
+    }
+    100%{
+        clip-path: polygon(52% 0, 100% 0, 100% 35%, 100% 75%, 100% 100%, 53% 100%, 37% 100%, 0 100%, 0 34%, 0 0);
+        scale: 1.5;
+    }
+}
+}

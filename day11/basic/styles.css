@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    font-size: 70px;
+    background-color: cyan;
+    color: black;
+    text-align: center;
+    line-height: 100px;
+
+    display: none;
+
+}
+
+@media only screen and (max-width: 500px) and (min-width: 0px){
+    #android{
+        display: block;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 500px){
+    #opera{
+        display: block;
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 850px){
+    #iphone{
+        display: block;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1200px){
+    #windows{
+        display: block;
+        background-color: yellow;
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1600px){
+    #windows{
+        display: block;
+        background-color: black;
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .box{
+        display: block;
+    }
+}
+
+
+img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+@media only screen and (min-width: 1400px){
+    .landscape img{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1000px){
+    .square img{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .potrait img{
+        display: block;
+    }
+}

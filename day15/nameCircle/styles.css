@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, .front, .back{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+body{
+    background-image: url(images/1.jpg);
+}
+
+.front,
+.back{
+    border: 2px solid white;
+    /* background-color: #000; */
+    background-image: linear-gradient(90deg, #333, black 80%, #333);
+    width: 30vw;
+    height: 60vh;
+    border-radius: 2.5rem;
+
+    position: relative;
+}
+
+.circle1, .circle2{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.circle1{
+    position: absolute;
+    left: -5%;
+    animation: goCircle 2s linear forwards;
+    transition: all 0.5s;
+}
+
+@keyframes goCircle{
+    10%{
+        background-color: transparent;
+        border-radius: 0;
+        transform: rotate(0deg)translate(-5rem)rotate(0deg);
+    }
+    50%{
+        border-radius: 20%;
+        transform: rotate(-180deg)translate(-5rem)rotate(-180deg);
+    }
+    70%{
+        background-color: transparent;
+        transform:translate(16rem);
+    }
+
+    100%{
+        transform:translate(23rem);
+    }
+}
+
+.circle1{
+    position: relative;
+}
+
+.circle2{
+    position: absolute;
+    left: 10%;
+    animation: rotatingCircle 2s linear forwards;
+    transition: all 0.5s;
+}
+
+.front > span{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2.5rem;
+    animation: revealText 2s linear forwards; 
+    transition: all 1s;
+}
+
+@keyframes revealText{
+    0%{
+        color: transparent;
+    }
+    60%{
+        color: transparent;
+    }
+}
+
+@keyframes rotatingCircle{
+    0%{
+        background-color: transparent;
+        border-radius: 0;
+        transform: rotate(360deg);
+    }
+    70%{
+        background-color: transparent;
+        border-radius: 0;
+        
+    }
+    100%{
+        border-radius: 100%;
+    }
+
+}
+
+
+.userpic{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, white, green 50%, transparent 50%);
+    background-size: 250%;
+    background-position: 100% 100%;
+    transition: 0.5s;
+
+    animation: picSlideup 2s linear forwards;
+
+}
+
+.userpic:hover{
+    background-position: 0% 0%;
+}
+
+
+@keyframes picSlideup{
+    0%{
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+
+}
+
+
+.detail>span{
+    position: absolute;
+    color: white;
+    font-size: 1.25rem;
+    animation: textDown 2s linear forwards;
+    opacity: 0;
+}
+
+.detail>span:nth-child(1){
+    bottom: 11rem;
+    left: 33%;
+}
+
+.detail>span:nth-child(2){
+    bottom: 8rem;
+    left: 40%;
+    animation-delay: 0.8s;
+}
+
+.detail>span:nth-child(3){
+    bottom: 5rem;
+    left: 37%;
+    animation-delay: 1.6s;
+}
+
+@keyframes textDown{
+    40%{
+        transform: translateY(-2rem);
+    }
+    50%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+.icons{
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    bottom: 1.5rem;
+}
+
+.icons{
+    display: flex;
+    list-style-type: none;
+}
+
+.icons>li{
+    margin: 0 2rem;
+    animation: iconDown 2s linear forwards;
+
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+@keyframes iconDown{
+    0%{
+        opacity: 0;
+        /* transform: translateY(3rem); */
+    }
+    80%{
+        opacity: 0;
+        /* transform: translateY(3rem); */
+    }
+    100%{
+        opacity: 1;
+        /* transform: translateY(3rem); */
+    }
+}
+
+.icons>li:hover{
+    scale: 1.2;
+    color: lightgoldenrodyellow;
+    transition: all 0.5s;
+}
+
+.icons>li::before{
+    content: "";
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: -0.5rem;
+    transition: all 1s;
+    display: none;
+}
+
+.icons>li:hover::before{
+    display: block;
+    animation: underLine 0.25s linear forwards;
+}
+
+@keyframes underLine{
+    0%{
+        width: 0px;
+    }
+    30%{
+        width: 5px;
+    }
+    50%{
+        width: 10px;
+    }
+    75%{
+        width: 15px;
+    }
+    100%{
+        width: 20px;
+    }
+}

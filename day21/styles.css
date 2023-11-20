@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-phones{
+    position: relative;
+    left: 23rem;
+    top: 2.2rem;
+}
+
+.home-phones{
+    width: 110%;
+}
+
+.home-phones>img{
+    width: 18rem;
+    height: 73.8vh;
+}
+
+.mob-img{
+    position: absolute;
+    top: -42.5rem;
+    left: 10.3rem;
+}
+
+.fb-login{
+    color: #2461cc;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+}
+
+.form-contain{
+    /* border: lightgray 1px solid; */
+    height: 70vh;
+    width: 23vw;
+    position: absolute;
+    left: 54.5rem;
+    top: 5vh;
+}
+
+
+.form-main .instaLogo img{
+    position: absolute;
+    width: 12rem;
+    height: 4.5rem;
+    left: 6rem;
+    top: 3rem;
+}
+
+.form-button{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 10rem;
+    left: 4rem;
+}
+
+.form-button>input{
+    margin: 0 3px 0.5rem 3px;
+    width: 15vw;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+.form-button>.ig-login{
+    width: 15vw;
+    margin-top: 0.5rem;
+    height: 4.5vh;
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+    background-color: #76a7fc;
+    font-weight: 600;
+    font-size: 1rem;
+} 
+
+.form-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.or-div{
+    display: flex;
+    position: absolute;
+    top: 61%;
+}
+
+.or-div>.or-line1,
+.or-div>.or-line2{
+    width: 6.5rem;
+    height: 2px;
+    background-color: lightgray;
+    margin-left: 4rem;
+    position: absolute;
+    top: -1rem;
+}
+
+.or-div>.or-line2{
+    left: 12rem;
+    margin-left: 1.5rem;
+}
+
+.or-div>.or-text{
+    position: absolute;
+    left: 11.5rem;
+    top: -1.5rem;
+
+    color: #2157b4;
+    font-weight: 1000;  
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.fb-login{
+    position: absolute;
+    top: 64%;
+    left: 25%;
+    color: #2157b4;
+    font-weight: bolder;
+    font-size: 1.15rem;
+}
+
+.fb-login>span{
+    margin-left: 0.5rem;
+}
+
+.form-main>span{
+    position: absolute;
+    top: 72%;
+    left: 35%;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+
+.form-main{
+    border: lightgray 1px solid;
+    height: 28rem;
+}
+
+.form-contain{
+    display: flex;
+    flex-direction: column;
+}
+
+.no-account{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    border: 1px solid lightgray;
+    letter-spacing: 0.5px;
+}
+
+.no-account>a{
+    text-decoration: none;
+    margin-left: 0.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-contain>.get-app{
+    position: absolute;
+    top: 97%;
+    left: 38%;
+    font-size: 1rem;
+}
+
+.get-app-img>img{
+    height: 4rem;
+    width: 10rem;
+}
+
+.get-app-img{
+    position: absolute;
+    top: 101%;
+    left: 2.5rem;
+}
+
+
+.get-app-img>.ms-img{
+    height: 2.7rem;
+    width: 8rem;
+    position: absolute;
+    top: 0.7rem;
+}
+
+
+.foot-link{
+    width: 60vw;
+    height: 6vh;
+    position: absolute;
+    left: 20rem;
+    bottom:0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-link>a{
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+
+.copy-right{
+    position: absolute;
+    bottom: 0.2rem;
+    /* z-index: 1; */
+    left: 43%;
+    font-size: 0.85rem;
+    color: blue;
+}
+
+.mob-img-1,
+.mob-img-2,
+.mob-img-3,
+.mob-img-4{
+    opacity:0;
+    animation: imageChange 12s infinite;
+    transition: all 1s;
+}
+
+.mob-img-2{
+    animation-delay: 3s;
+}
+.mob-img-3{
+    animation-delay: 6s;
+}
+.mob-img-4{
+    animation-delay: 9s;
+}
+
+@keyframes imageChange{
+    0%{
+        opacity:0;
+    }
+    12%{
+        opacity: 0;
+    }
+    24%{
+        opacity: 1;
+    }
+    36%{
+        opacity: 1;
+    }
+    48%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    72%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}

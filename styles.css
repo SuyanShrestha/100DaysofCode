@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+.top-div{
+    width: 100vw;
+    height: 1.5rem;
+    background: linear-gradient(270deg, rgba(78,190,162,1) 0%, rgba(33,105,116,1) 100%);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.top-div .copy-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 8rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.top-div .contacts{
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+}
+
+.top-div .contacts .con-icon{
+    padding-left: 1rem;
+}
+
+#twitter{
+    margin-right: 8rem;
+}
+
+.header{
+    border: 1px solid black;
+    height: 6.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 1000;
+}
+
+.header img{
+    width: 25rem;
+    margin: 0 8rem;
+}
+
+.header ul{
+    list-style-type: none;
+}
+
+.header ul li{
+    float: left;
+}
+
+.header ul li a{
+    display: block;
+    padding: 0 2rem;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    font-size: 1rem;
+    color: #3B3B3B;
+}
+
+.header ul li a:hover{
+    color: #4EBEA2;
+}
+.header-right{
+    height: 100%;
+    width: 57rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right button{
+    height: 2.25rem;
+    width: 6rem;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.header-right .sign-up{
+    background: linear-gradient(90deg, rgba(78,190,162,1) 0%, rgba(33,105,116,1) 100%);
+    color: white;
+}
+
+
+
+.page-one-back img{
+    width: 100%;
+    height: 85vh;
+    object-fit: cover;
+    object-position: 5% 45%;
+}
+
+.page-one-back h1 span{
+    position: absolute;
+    top: 30%;
+    /* font-family: 'Merriweather', serif; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 3rem 0rem 0 7rem;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.page-one-back h2 span{
+    position: absolute;
+    top: 46%;
+    left: 7rem;
+    width: 35rem;
+    line-height: 2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.page-one-back .back-img-one{
+    background: rgba(12, 12, 12, 0.3);
+    clip-path: polygon(76% 0, 98% 49%, 76% 100%, 0 100%, 0 0);
+    /* z-index: -11; */
+    position: absolute;
+    height: 87%;
+    width: 55%;
+    top: 16%;
+} 
+
+/* .page-one-back .back-img-one-2{
+    background: rgba(12, 12, 12, 0.4);
+    opacity: 0.3;
+    clip-path: polygon(79% 0, 98% 49%, 76% 100%, 0 100%, 0 0);
+    position: absolute;
+    height: 87%;
+    width: 55%;
+    top: 16%;
+    
+    animation: slideIn2 1s ease-out forwards;
+    animation-delay: 1s;
+    transition: all 1s;
+}
+
+.page-one-back .back-img-one-3{
+    background: rgba(12, 12, 12, 0.5);
+    opacity: 0.3;
+    clip-path: polygon(79% 0, 98% 49%, 76% 100%, 0 100%, 0 0);
+    position: absolute;
+    height: 87%;
+    width: 55%;
+    top: 16%;
+    
+    animation: slideIn3 1s ease-out forwards;
+    animation-delay: 2s;
+    transition: all 1s;
+} */
+
+.page-one-back .back-img-one::before{
+    content: '';
+    background: rgba(12, 12, 12, 0.4);
+    clip-path: polygon(75% 0, 99% 49%, 75% 100%, 0 100%, 0 0);
+    position: absolute;
+    height: 100%;
+    width: 94%;
+    top: 0;
+}
+
+.page-one-back .back-img-one::after{
+    content: '';
+    background: rgba(12, 12, 12, 0.5);
+    clip-path: polygon(73% 0, 99% 49%, 73% 100%, 0 100%, 0 0);
+    position: absolute;
+    height: 100%;
+    width: 88%;
+    top: 0;
+}
+
+.page-one-back .book-now{
+    background : linear-gradient(90deg, rgba(33,105,116,1) 0%, rgba(78,190,162,1) 100%);
+    color : white;
+    position: absolute;
+    top: 70%;
+    left: 7rem;
+    height: 3rem;
+    width: 10rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+
+    overflow: hidden;
+}
+
+.header-right .log-in:hover{
+    color: #3aa087;
+}

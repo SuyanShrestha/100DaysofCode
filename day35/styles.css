@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#btn{
+    width: 8rem;
+    height: 4rem;
+    border: 1px solid black;
+    background: linear-gradient(90deg, skyblue, goldenrod);
+    color: black;
+    font-size: 1rem;
+    margin: 5rem 0 0 5rem;
+    border-radius: 1rem;
+}

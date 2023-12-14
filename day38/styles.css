@@ -1,0 +1,21 @@
+#myDiv{
+    background: red;
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+}
+
+button{
+    margin: 2rem;
+    width: 6rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+#myCanvas,
+#myCanvas2,
+#myCanvas3{
+    border: 1px solid black;
+    margin: 1rem;
+    /* background-color: skyblue; */
+}

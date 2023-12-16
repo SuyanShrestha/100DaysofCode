@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#myDiv{
+    height: 1000px;
+    width: 1000px;
+    background-color: lightblue;
+}
+
+#mybtn,
+#mybtn2,
+#mybtn3,
+.btn{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+p {
+    margin: 1rem 4rem;
+}

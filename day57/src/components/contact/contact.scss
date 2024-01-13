@@ -1,0 +1,93 @@
+@import '../../app.scss';
+
+.contact{
+    height: 100%;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 3.25rem;
+    
+    @include mobile{
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .textContainer{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        @include mobile{
+            gap: 1.25rem;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 6rem;
+            @include mobile{
+                font-size: 3rem;
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .formContainer{
+        flex: 1;
+
+        @include mobile{
+            padding: 50px;
+            padding-top: 0;
+            width: 100%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            
+
+            input{
+                padding: 1.25rem;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                border-radius: 1rem;
+                @include mobile {
+                    padding: 10px;
+                }
+            }
+
+            textarea{
+                padding: 1.25rem;
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                border-radius: 1rem;
+                @include mobile {
+                    padding: 10px;
+                }
+            }
+
+            button{
+                padding: 1.25rem;
+                border: none;
+                background-color: orange;
+                cursor: pointer;
+                width: 15rem;
+                border-radius: 3rem;
+                font-size: 1.25rem;
+
+                @include mobile{
+                    padding: 1rem;
+                    height: 3rem;
+                    text-align: center;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

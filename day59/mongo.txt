@@ -1,0 +1,71 @@
+school> db.students
+school.students
+school> db.students.insertOne({name: 'Suyan', age: 26})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65a4dd6555a9001b56b4e937')
+}
+school> db.students.find()
+[
+  { _id: ObjectId('65a4dd6555a9001b56b4e937'), name: 'Suyan', age: 26 }
+]
+db.collection.drop()
+true
+school> db.students
+school.students
+school> db.students.insertOne({name: 'Suyan', age: 26})
+{
+  acknowledged: true,
+  insertedId: ObjectId('65a4dd6555a9001b56b4e937')
+}
+school> db.students.find()
+[
+  { _id: ObjectId('65a4dd6555a9001b56b4e937'), name: 'Suyan', age: 26 }
+]
+school> db.students.insertMany([{name: 'Shristi', age: 26}, {name: 'Alex', age: 15}, {name: 'Mariyam', age: 32}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('65a4de8555a9001b56b4e938'),
+    '1': ObjectId('65a4de8555a9001b56b4e939'),
+    '2': ObjectId('65a4de8555a9001b56b4e93a')
+  }
+}
+
+// sorting and limiting
+school> db.students.find().sort({name:-1})			// reverse alphabetical
+school> db.students.find().sort({name:1})			// alphabetical
+
+db.students.find().sort({age:-1})					// descending
+db.students.find().sort({age: 1})					// ascending
+
+// ;LIMITING
+school> db.students.find().limit(1)
+school> db.students.find().limit(3)
+
+school> db.students.find().sort({age: -1}).limit(1)		// gives student with oldest age
+
+// FIND METHOD 
+// .find({query}, {projection})
+school> db.students.find({age: 36})
+school> db.students.find({}, {_id: false})					// sab students ko id bahek sab dini
+school> db.students.find({age: 26},{name: true})			// age 26 vako haru ko naam matra dini
+school> db.students.find({age: 26},{name: true, gpa: true})		// age 26 vako haruko name ra gpa dini
+
+// UPDATE METHOD
+// db.students.updateOne({filter}, {update})
+
+// $set operator will result in making updates
+school> db.students.updateOne({name: 'Alex'}, {$set: {age: 17, course: 'science' }})
+school> db.students.updateOne({_id: ObjectId('65a4de8555a9001b56b4e939')},{ $set: {name: 'AlexKumar', fulltime: false}})
+
+// we can also use $unset oprator (these are atomic operators) in removing fields
+school> db.students.updateOne({name: 'AlexKumar'}, {$unset: {fulltime: ''}})     
+school> db.students.updateOne({name: 'AlexKumar'}, {$unset: {course: ''}, $set: {name: 'Alex'}})
+
+school> db.students.updateMany({},{$set: {fulltime: false}})
+
+school> db.students.updateOne({name: 'Shristi'}, {$unset: {fulltime: ''}})       
+school> db.students.updateOne({name: 'Suyan'}, {$unset: {fulltime: ''}})
+school> db.students.find()
+school> db.students.updateMany({fulltime: {$exists: false}},{$set: {fulltime: true}})
